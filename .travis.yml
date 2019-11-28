@@ -7,9 +7,9 @@ matrix:
     language: objective-c
     osx_image: xcode10.2
     before_install:
-    - export PATH=/usr/local/opt/llvm/bin:"${PATH}"
+    - export PATH=/usr/local/opt/llvm@8/bin:"${PATH}"
     - brew update
-    - brew install llvm
+    - brew install llvm@8
     - sudo swift utils/make-pkgconfig.swift
     script:
     - swift test -Xlinker -w
